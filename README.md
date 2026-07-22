@@ -1,24 +1,24 @@
 # 🚀 Automated Supply Chain Analytics Pipeline
 
-An end-to-end automated supply chain analytics pipeline built using **n8n**, **Supabase PostgreSQL**, and **Quadratic AI**. The project automates the ingestion of supply chain CSV files from Gmail into a cloud-hosted PostgreSQL database, where Quadratic AI performs data analysis to generate KPI dashboards, customer performance reports, visualizations, and business insights through a low-code workflow.
+An end-to-end automated supply chain analytics pipeline built using **n8n**, **Supabase PostgreSQL**, and **Quadratic AI**. This project automates the ingestion of supply chain CSV files from Gmail into a cloud-hosted PostgreSQL database, where Quadratic AI analyzes the data to generate KPI dashboards, customer performance reports, visualizations, and business recommendations using AI-assisted analytics.
 
 ---
 
 # 📖 Overview
 
-Supply chain teams often receive operational data as CSV files through email, requiring repetitive manual imports before analysis. This project demonstrates how workflow automation, cloud databases, and AI-assisted analytics can streamline this process.
+Supply chain teams frequently receive operational datasets as CSV files via email. Importing these files manually into databases before analysis is repetitive and time-consuming.
 
-Using **n8n**, incoming CSV files are automatically detected, extracted, and loaded into a **Supabase PostgreSQL** database. **Quadratic AI** then connects directly to the database to analyze the data, generate visualizations, calculate key supply chain KPIs, and produce actionable business insights using natural language prompts.
+This project demonstrates how workflow automation and AI-assisted analytics can simplify this process. Using **n8n**, incoming CSV files are automatically detected, extracted, and loaded into a cloud-hosted PostgreSQL database on **Supabase**. **Quadratic AI** then connects directly to the database to generate dashboards, visualizations, KPI reports, and business insights using natural language prompts.
 
 ---
 
 # 🎯 Project Objectives
 
-- Automate supply chain data ingestion using a low-code workflow.
-- Build a repeatable ETL pipeline with minimal manual intervention.
+- Automate CSV data ingestion using a low-code workflow.
+- Eliminate repetitive manual data loading.
 - Store structured supply chain data in a cloud-hosted PostgreSQL database.
-- Generate KPI dashboards using AI-assisted analytics.
-- Identify operational trends and customer performance insights.
+- Generate AI-assisted dashboards and business insights.
+- Analyse supply chain performance through operational KPIs.
 - Demonstrate an end-to-end analytics workflow using modern automation tools.
 
 ---
@@ -37,31 +37,27 @@ Using **n8n**, incoming CSV files are automatically detected, extracted, and loa
 
 # 🏗️ Solution Architecture
 
-<p align="center">
-  <img src="images/architecture.png" width="900">
-</p>
+![Solution Architecture](Screenshots/architecture.png)
 
 ---
 
 # 🔄 Workflow Automation
 
-The automated workflow performs the following steps:
+The workflow performs the following steps automatically:
 
 1. Monitors Gmail for incoming supply chain CSV files.
-2. Extracts CSV attachments automatically using **n8n**.
-3. Loads structured data into a **Supabase PostgreSQL** database.
+2. Downloads and extracts CSV attachments using **n8n**.
+3. Loads structured data into a cloud-hosted **PostgreSQL** database on **Supabase**.
 4. Connects **Quadratic AI** to the PostgreSQL database.
-5. Generates KPI dashboards, customer performance reports, charts, and business insights using AI.
+5. Generates KPI dashboards, customer performance reports, visualizations, and business insights.
 
-<p align="center">
-  <img src="images/n8n-workflow.png" width="900">
-</p>
+![n8n Workflow](Screenshots/N8N%20workflow.png)
 
 ---
 
 # 📊 Data Processing Summary
 
-During this implementation:
+During this implementation, the automated workflow successfully processed:
 
 | Metric | Value |
 |---------|------:|
@@ -70,7 +66,7 @@ During this implementation:
 | Dataset 1 | **57 Records** |
 | Dataset 2 | **109 Records** |
 
-The workflow automatically processed incoming CSV files and loaded **166 records** into a cloud-hosted PostgreSQL database, eliminating manual data loading and creating a centralized data source for AI-assisted analytics.
+The workflow automatically extracted CSV files from Gmail and loaded **166 records** into a centralized PostgreSQL database, eliminating manual data loading and creating a reliable data source for AI-assisted analytics.
 
 ---
 
@@ -88,17 +84,15 @@ Quadratic AI generated the following operational KPIs from the stored supply cha
 | In-Full Delivery | **47.73%** |
 | OTIF (On-Time In-Full) | **27.80%** |
 
-<p align="center">
-  <img src="images/overall-kpi-dashboard.png" width="900">
-</p>
+![Overall KPI Dashboard](Screenshots/overall-kpi-dashboard.png)
 
 ---
 
 # 🌎 Customer Performance Analysis
 
-The project compares fulfilment performance across high-value customers using three operational metrics:
+The dashboard compares customer fulfilment performance using three key operational metrics:
 
-- OTIF
+- OTIF (On-Time In-Full)
 - In-Full Delivery
 - On-Time Delivery
 
@@ -106,24 +100,20 @@ The project compares fulfilment performance across high-value customers using th
 
 ## 🇺🇸 USA Customer Performance
 
-<p align="center">
-  <img src="images/usa-customer-performance.png" width="900">
-</p>
+![USA Customer Performance](Screenshots/usa-customer-performance.png)
 
 ### Key Findings
 
 - **Best Market** generated the highest order value (**3.09M**) while achieving an OTIF of **40.00%**.
-- **Lidl** and **Foodtown** recorded the lowest OTIF values (**16.67%**) despite generating over **2.29M** in order value.
-- Most customers maintained relatively strong On-Time Delivery, but lower In-Full performance reduced overall OTIF.
+- **Lidl** and **Foodtown** recorded the lowest OTIF values (**16.67%**) despite generating more than **2.29M** in order value.
+- Most customers maintained relatively strong On-Time Delivery, while lower In-Full performance reduced the overall OTIF.
 - High-value customers present opportunities for improving fulfilment performance.
 
 ---
 
 ## 🇮🇳 India Customer Performance
 
-<p align="center">
-  <img src="images/india-customer-performance.png" width="900">
-</p>
+![India Customer Performance](Screenshots/India-customer-performance.png)
 
 ### Key Findings
 
@@ -137,7 +127,7 @@ The project compares fulfilment performance across high-value customers using th
 
 # 🤖 AI-Assisted Analytics
 
-Quadratic AI was connected directly to the PostgreSQL database and used natural language prompts to generate:
+Quadratic AI was connected directly to the PostgreSQL database and used natural language prompts to automatically generate:
 
 - Supply chain KPI dashboards
 - Customer performance reports
@@ -146,13 +136,13 @@ Quadratic AI was connected directly to the PostgreSQL database and used natural 
 - Business insights
 - Operational recommendations
 
-This demonstrates how AI-assisted analytics can accelerate business reporting without requiring complex dashboard development.
+This demonstrates how AI-assisted analytics can accelerate business reporting without requiring traditional dashboard development or complex coding.
 
 ---
 
 # 💡 Business Insights
 
-The analysis highlighted several opportunities to improve operational performance.
+The analysis highlighted several operational improvement opportunities.
 
 ### OTIF Performance
 
@@ -161,21 +151,15 @@ The overall **OTIF** was **27.80%**, considerably lower than both:
 - **On-Time Delivery (61.54%)**
 - **In-Full Delivery (47.73%)**
 
-This indicates that relatively few customer orders met both delivery conditions simultaneously.
-
----
+This indicates that relatively few customer orders satisfied both delivery conditions simultaneously.
 
 ### Inventory Fulfilment
 
-The **Line Fill Rate (62.30%)** was substantially lower than the **Volume Fill Rate (96.54%)**, suggesting that while most requested product quantities were supplied, not all requested product lines were fulfilled completely.
-
----
+The **Line Fill Rate (62.30%)** was substantially lower than the **Volume Fill Rate (96.54%)**, suggesting that while most requested product quantities were supplied, not every requested product line was fulfilled completely.
 
 ### Customer Performance
 
-Several high-value customers generated significant revenue while recording comparatively lower OTIF values, highlighting opportunities to improve fulfilment performance for strategic accounts.
-
----
+Several high-value customers generated significant revenue while recording comparatively lower OTIF values, highlighting opportunities to improve fulfilment performance for strategic customer accounts.
 
 ### Regional Comparison
 
@@ -187,9 +171,9 @@ Within the analysed customer samples, India's top customers demonstrated stronge
 
 Based on the analysis, the following opportunities were identified:
 
-- Investigate warehouse operations, inventory availability, and delivery scheduling to improve OTIF performance.
-- Improve inventory planning and replenishment strategies to increase the Line Fill Rate.
-- Prioritise fulfilment improvements for high-value customers to strengthen customer satisfaction and retention.
+- Improve OTIF by reviewing warehouse operations, inventory availability, and delivery scheduling.
+- Improve inventory planning to increase the Line Fill Rate.
+- Prioritise fulfilment improvements for high-value customers.
 - Investigate regional operational practices to identify best practices that could be adopted across markets.
 - Continue automated KPI monitoring using the workflow to support timely, data-driven operational decisions.
 
@@ -198,7 +182,7 @@ Based on the analysis, the following opportunities were identified:
 # 📂 Repository Structure
 
 ```
-automated-supply-chain-analytics-pipeline
+Automated-Supply-Chain-Analytics-Pipeline
 │
 ├── README.md
 ├── Screenshots/
@@ -206,13 +190,12 @@ automated-supply-chain-analytics-pipeline
 │   ├── N8N workflow.png
 │   ├── overall-kpi-dashboard.png
 │   ├── usa-customer-performance.png
-│   └── india-customer-performance.png
+│   └── India-customer-performance.png
 │
 ├── workflow/
-│   └── N8N workflow.json
+│   └── n8n-workflow.json
 │
 └── data/
-    └── README.md
 ```
 
 ---
@@ -222,10 +205,9 @@ automated-supply-chain-analytics-pipeline
 - Workflow Automation
 - Low-Code Development
 - ETL Pipeline Development
-- n8n
+- Cloud Databases
 - Supabase
 - PostgreSQL
-- Cloud Databases
 - Data Integration
 - AI-Assisted Analytics
 - Prompt Engineering
@@ -253,4 +235,3 @@ automated-supply-chain-analytics-pipeline
 Master of Analytics | Massey University
 
 Passionate about Data Analytics, Workflow Automation, Cloud Technologies, and AI-assisted Business Intelligence.
-
